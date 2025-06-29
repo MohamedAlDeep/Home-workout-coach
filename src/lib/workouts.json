@@ -1,0 +1,307 @@
+{
+  "workouts": {
+    "upper_body": {
+      "chest": [
+        {
+          "name": "Push-ups",
+          "equipment": "None",
+          "variations": [
+            "Standard",
+            "Wide-grip",
+            "Diamond",
+            "Decline",
+            "Archer",
+            "Spiderman",
+            "Plyometric"
+          ],
+          "difficulty": "Beginner to Advanced"
+        },
+        {
+          "name": "Dips",
+          "equipment": "Parallel bars, chairs, or countertop",
+          "variations": [
+            "Bench dips",
+            "Bar dips",
+            "Weighted dips",
+            "Russian dips"
+          ],
+          "difficulty": "Intermediate"
+        },
+        {
+          "name": "Floor Press",
+          "equipment": "Dumbbells (optional)",
+          "difficulty": "Beginner"
+        }
+      ],
+      "back": [
+        {
+          "name": "Pull-ups",
+          "equipment": "Pull-up bar",
+          "variations": [
+            "Standard",
+            "Wide-grip",
+            "Chin-ups",
+            "Commando",
+            "Typewriter",
+            "L-sit"
+          ],
+          "difficulty": "Intermediate to Advanced"
+        },
+        {
+          "name": "Inverted Rows",
+          "equipment": "TRX, rings, or table",
+          "variations": [
+            "Underhand grip",
+            "Overhand grip",
+            "Archer rows",
+            "Weighted rows"
+          ],
+          "difficulty": "Beginner to Intermediate"
+        },
+        {
+          "name": "Superman Holds",
+          "equipment": "None",
+          "difficulty": "Beginner"
+        }
+      ],
+      "shoulders": [
+        {
+          "name": "Pike Push-ups",
+          "equipment": "None",
+          "variations": [
+            "Elevated feet",
+            "Handstand progression",
+            "Wall-assisted"
+          ],
+          "difficulty": "Intermediate"
+        },
+        {
+          "name": "Handstand Push-ups",
+          "equipment": "Wall",
+          "difficulty": "Advanced"
+        },
+        {
+          "name": "Arm Circles",
+          "equipment": "None",
+          "variations": [
+            "Small circles",
+            "Large circles",
+            "Weighted circles"
+          ],
+          "difficulty": "Beginner"
+        }
+      ],
+      "arms": {
+        "biceps": [
+          {
+            "name": "Chin-ups",
+            "equipment": "Pull-up bar",
+            "difficulty": "Intermediate"
+          },
+          {
+            "name": "Bodyweight Curls",
+            "equipment": "Towel or resistance band",
+            "difficulty": "Beginner"
+          },
+          {
+            "name": "Isometric Holds",
+            "equipment": "None",
+            "difficulty": "Beginner"
+          }
+        ],
+        "triceps": [
+          {
+            "name": "Triceps Dips",
+            "equipment": "Bench or parallel bars",
+            "difficulty": "Intermediate"
+          },
+          {
+            "name": "Close-grip Push-ups",
+            "equipment": "None",
+            "difficulty": "Beginner to Intermediate"
+          },
+          {
+            "name": "Bodyweight Skull Crushers",
+            "equipment": "Low bar or bench",
+            "difficulty": "Intermediate"
+          }
+        ],
+        "forearms": [
+          {
+            "name": "Towel Hang",
+            "equipment": "Pull-up bar and towel",
+            "difficulty": "Intermediate"
+          },
+          {
+            "name": "Wrist Curls",
+            "equipment": "Light dumbbell or water bottle",
+            "difficulty": "Beginner"
+          }
+        ]
+      }
+    },
+    "core": [
+      {
+        "name": "Plank",
+        "equipment": "None",
+        "variations": [
+          "Standard",
+          "Side plank",
+          "Extended plank",
+          "Reverse plank",
+          "Plank jacks",
+          "Plank to push-up"
+        ],
+        "difficulty": "Beginner to Advanced"
+      },
+      {
+        "name": "Leg Raises",
+        "equipment": "None (mat optional)",
+        "variations": [
+          "Hanging (if bar available)",
+          "Lying",
+          "Seated",
+          "Weighted"
+        ],
+        "difficulty": "Intermediate"
+      },
+      {
+        "name": "Russian Twists",
+        "equipment": "None (weight optional)",
+        "difficulty": "Intermediate"
+      },
+      {
+        "name": "Hanging Knee Raises",
+        "equipment": "Pull-up bar",
+        "difficulty": "Intermediate"
+      },
+      {
+        "name": "Dragon Flags",
+        "equipment": "Bench or stable surface",
+        "difficulty": "Advanced"
+      }
+    ],
+    "lower_body": {
+      "quads": [
+        {
+          "name": "Bodyweight Squats",
+          "equipment": "None",
+          "variations": [
+            "Standard",
+            "Pistol (single-leg)",
+            "Jump squats",
+            "Shrimp squats",
+            "Sissy squats"
+          ],
+          "difficulty": "Beginner to Advanced"
+        },
+        {
+          "name": "Step-ups",
+          "equipment": "Bench or sturdy platform",
+          "difficulty": "Beginner"
+        }
+      ],
+      "hamstrings": [
+        {
+          "name": "Glute Bridges",
+          "equipment": "None",
+          "variations": [
+            "Single-leg",
+            "Elevated",
+            "Weighted",
+            "Marching"
+          ],
+          "difficulty": "Beginner"
+        },
+        {
+          "name": "Nordic Curls",
+          "equipment": "Anchor point for feet",
+          "difficulty": "Advanced"
+        }
+      ],
+      "calves": [
+        {
+          "name": "Calf Raises",
+          "equipment": "None",
+          "variations": [
+            "Single-leg",
+            "Elevated",
+            "Weighted"
+          ],
+          "difficulty": "Beginner"
+        }
+      ],
+      "glutes": [
+        {
+          "name": "Hip Thrusts",
+          "equipment": "Bench or elevated surface",
+          "difficulty": "Beginner"
+        },
+        {
+          "name": "Fire Hydrants",
+          "equipment": "None",
+          "difficulty": "Beginner"
+        }
+      ]
+    },
+    "full_body": [
+      {
+        "name": "Burpees",
+        "equipment": "None",
+        "variations": [
+          "Standard",
+          "Push-up added",
+          "Jump added",
+          "Tuck jump",
+          "One-arm"
+        ],
+        "difficulty": "Intermediate"
+      },
+      {
+        "name": "Mountain Climbers",
+        "equipment": "None",
+        "variations": [
+          "Standard",
+          "Cross-body",
+          "Slow controlled"
+        ],
+        "difficulty": "Beginner"
+      },
+      {
+        "name": "Bear Crawls",
+        "equipment": "None",
+        "difficulty": "Intermediate"
+      },
+      {
+        "name": "Jumping Jacks",
+        "equipment": "None",
+        "difficulty": "Beginner"
+      },
+      {
+        "name": "Squat Thrusts",
+        "equipment": "None",
+        "difficulty": "Beginner to Intermediate"
+      }
+    ]
+  },
+  "equipment_suggestions": [
+    "Pull-up bar",
+    "Resistance bands (various tensions)",
+    "Parallel bars or sturdy chairs",
+    "Jump rope",
+    "Yoga mat",
+    "Gymnastics rings",
+    "Suspension trainer (TRX)",
+    "Light dumbbells or water bottles",
+    "Towel",
+    "Sturdy table for inverted rows"
+  ],
+  "workout_tips": [
+    "Focus on form before increasing difficulty",
+    "Control movements for maximum muscle engagement",
+    "Breathe properly during exercises",
+    "Start with easier variations and progress gradually",
+    "Rest 30-90 seconds between sets",
+    "Combine upper and lower body days for full-body workouts"
+  ]
+}

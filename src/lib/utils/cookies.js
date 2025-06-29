@@ -37,7 +37,8 @@ export function setCookie(name, value, days = 30, path = '/') {
     let expires = '';
     if (days) {
         const date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        // Set cookie to expire far in the future (e.g., 100 years)
+        date.setFullYear(date.getFullYear() + 100);
         expires = `; expires=${date.toUTCString()}`;
     }
     

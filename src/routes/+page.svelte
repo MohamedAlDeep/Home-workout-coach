@@ -2,7 +2,7 @@
 <!-- App.svelte -->
 <script>
   import Add from "$lib/components/signup.svelte";
-  import List from "$lib/components/profile.svelte";
+  
   import { userStore } from '$lib/stores/user';
   
   let user = null;
@@ -22,5 +22,11 @@
   <p>Welcome back, {user.name || 'User'}! Check <a href="/profile">profile</a></p>
 {/if}
 
-<h2>Result</h2>
-<List />
+<h2>Last Streak 🔥</h2>
+
+<h2>Latest Workouts</h2>
+
+
+
+
+
