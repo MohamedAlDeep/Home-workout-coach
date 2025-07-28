@@ -10,6 +10,7 @@ import type { User, WorkoutLog } from "@/types/user"
 import { getCurrentUser, logout, getWorkoutLogs, calculateStreak, workoutTemplates } from "@/lib/storage"
 import { AuthForm } from "@/components/auth-form"
 import { WorkoutLogger } from "@/components/workout-logger"
+import { UserProfile } from "@/components/user-profile"
 
 export default function WorkoutApp() {
   const [user, setUser] = useState<User | null>(null)
@@ -225,54 +226,63 @@ export default function WorkoutApp() {
           </CardContent>
         </Card>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* User Profile - Full width on mobile, 1 column on desktop */}
+          <div className="lg:col-span-3">
+            <UserProfile user={user} onUserUpdated={handleWorkoutLogged} />
+          </div>
+
           {/* Workout Logger */}
-          <WorkoutLogger user={user} onWorkoutLogged={handleWorkoutLogged} />
+          <div className="lg:col-span-2">
+            <WorkoutLogger user={user} onWorkoutLogged={handleWorkoutLogged} />
+          </div>
 
           {/* Recent Workouts */}
-          <Card className="border-0 shadow-lg">
-            <CardHeader>
-              <CardTitle>Recent Workouts</CardTitle>
-              <CardDescription>Your latest completed workout sessions</CardDescription>
-            </CardHeader>
-            <CardContent>
-              {recentWorkouts.length === 0 ? (
-                <div className="text-center py-8 text-gray-500">
-                  <Dumbbell className="w-12 h-12 mx-auto mb-4 text-gray-300" />
-                  <p>No workouts completed yet.</p>
-                  <p className="text-sm">Start your first workout to see it here!</p>
-                </div>
-              ) : (
-                <div className="space-y-4">
-                  {recentWorkouts.map((workout, index) => (
-                    <div key={workout.id}>
-                      <div className="flex items-center justify-between p-4 rounded-lg bg-gray-50">
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-full flex items-center justify-center bg-green-100">
-                            <CheckCircle className="w-5 h-5 text-green-600" />
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-gray-900">{workout.name}</h3>
-                            <div className="flex items-center gap-3 mt-1">
-                              <Badge variant="secondary" className={getWorkoutTypeColor(workout.type)}>
-                                {workout.type}
-                              </Badge>
-                              <span className="text-sm text-gray-600 flex items-center gap-1">
-                                <Clock className="w-3 h-3" />
-                                {workout.duration} min
-                              </span>
-                              <span className="text-sm text-gray-600">{formatDate(workout.date)}</span>
+          <div className="lg:col-span-1">
+            <Card className="border-0 shadow-lg">
+              <CardHeader>
+                <CardTitle>Recent Workouts</CardTitle>
+                <CardDescription>Your latest completed workout sessions</CardDescription>
+              </CardHeader>
+              <CardContent>
+                {recentWorkouts.length === 0 ? (
+                  <div className="text-center py-8 text-gray-500">
+                    <Dumbbell className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+                    <p>No workouts completed yet.</p>
+                    <p className="text-sm">Start your first workout to see it here!</p>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {recentWorkouts.map((workout, index) => (
+                      <div key={workout.id}>
+                        <div className="flex items-center justify-between p-4 rounded-lg bg-gray-50">
+                          <div className="flex items-center gap-4">
+                            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-green-100">
+                              <CheckCircle className="w-5 h-5 text-green-600" />
+                            </div>
+                            <div>
+                              <h3 className="font-semibold text-gray-900">{workout.name}</h3>
+                              <div className="flex items-center gap-3 mt-1">
+                                <Badge variant="secondary" className={getWorkoutTypeColor(workout.type)}>
+                                  {workout.type}
+                                </Badge>
+                                <span className="text-sm text-gray-600 flex items-center gap-1">
+                                  <Clock className="w-3 h-3" />
+                                  {workout.duration} min
+                                </span>
+                                <span className="text-sm text-gray-600">{formatDate(workout.date)}</span>
+                              </div>
                             </div>
                           </div>
                         </div>
+                        {index < recentWorkouts.length - 1 && <Separator className="my-2" />}
                       </div>
-                      {index < recentWorkouts.length - 1 && <Separator className="my-2" />}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </CardContent>
-          </Card>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </main>
     </div>
