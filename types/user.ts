@@ -2,6 +2,9 @@ export interface User {
   id: string
   name: string
   email: string
+  gender: "male" | "female" | "other" | "prefer-not-to-say"
+  weight: number // in kg
+  height: number // in cm
   createdAt: string
   currentStreak: number
   totalWorkouts: number
