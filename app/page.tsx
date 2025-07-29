@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Flame, Calendar, Clock, Dumbbell, TrendingUp, Target, CheckCircle, LogOut } from "lucide-react"
+import Link from "next/link"
+import { Flame, Calendar, Clock, Dumbbell, TrendingUp, Target, CheckCircle, LogOut, Bot } from "lucide-react"
 import type { User, WorkoutLog } from "@/types/user"
 import { getCurrentUser, logout, getWorkoutLogs, calculateStreak, workoutTemplates } from "@/lib/storage"
 import { AuthForm } from "@/components/auth-form"
@@ -128,6 +129,12 @@ export default function WorkoutApp() {
               <span className="font-bold text-xl">FitHome</span>
             </div>
             <div className="flex items-center gap-4">
+              <Link href="/ai-assistant">
+                <Button variant="outline" size="sm">
+                  <Bot className="w-4 h-4 mr-2" />
+                  AI Assistant
+                </Button>
+              </Link>
               <span className="text-sm text-gray-600">Welcome, {user.name}!</span>
               <Button variant="outline" size="sm" onClick={handleLogout}>
                 <LogOut className="w-4 h-4 mr-2" />
